@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+
+
+
+body{
+    background-color: rgba(0, 0, 0, 0.896);
+}
+h1{
+    @apply mx-auto max-w-4xl text-center text-5xl font-bold   text-white; 
+}
+.text-gradient{
+    color: blueviolet;
+}
+
+
+.nav-design {
+  display: flex;
+  align-items: flex-start;      /* محاذاة رأسية */
+  justify-content: flex-start; /* أو center / space-between حسب التصميم */
+  gap: 50px;                /* مسافة بين العناصر */
+  padding: 16px 24px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: 50px;
+  margin-top: -30px;
+}
+
+
+.nav-design .logo-icon{
+  width: 80px;
+  height: 40px; /* ← حدّد ارتفاعًا */
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+.nav-design .setting-icon{
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px black solid;
+}
+
+
+ .nav-design .search-container{
+  position: relative;
+  width: 60%;
+  max-width: 500px;
+}
+.search-container input{
+  width: 100%;
+  height: 40px;
+  padding: 0px 16px 8px 44px; /* مساحة لليسار (لإدخال الأيقونة هناك) */
+  border-radius: 5px;
+  background-color: rgb(4, 4, 4);
+  color: white;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.search-img{
+  position: absolute;
+  left: 10px;          /* مسافة من اليسار */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none; /* لا تمنع النقر على الـ input */
+  z-index: 2;
+}
+
+.header-container h1{
+padding: 20px;
+margin: 0 auto;
+}
+h1 span{
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 204, 0) ;
+}
+
+.movies-container{
+}
+.movies-container h2{
+  display: flex;  
+  height: 50px;
+  padding: 20px 0px;
+}
+/* في ملف الـ CSS الخاص بك — تأكد من هذا بالضبط */
+
+.all-movies {
+  display: grid ;
+  grid-template-rows: repeat(5, minmax(44px, 1fr)) ;
+  grid-auto-columns: minmax(140px, 1fr) ;
+  grid-auto-flow: column ;
+  gap: 20px;
+  margin-right: 150px;
+  /* لا تضع أي grid-template-columns هنا */
+}
+
+.list-movie {
+  margin-top: 50px;
+  background-color: #000000;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.list-movie:hover {
+  background-color: #374151;
+}
+/* @layer components{
+.movie-card{
+
+  @apply bg-dark-100 p-5  shadow-inner shadow-light-100/10;
+}
+} */
+
+
+.movie-card{
+  height: 1;
+}
+.movie-card img{
+  border-radius: 5px;
+}
+
+.mt-4{
+ display: flex;
+ padding-bottom: 20px;
+ font-size: small;
+
+
+}
+/* MovieCard.css */
+.content {
+
+}
+
+.rating{
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+  width: 18px;
+  margin-bottom:20px;
+  background-color: #1f2937;
+  color: #1f2937;
+  box-shadow: #1f2937;
+}
+.rating p{
+  text-transform: uppercase;
+  color: white;
+  font-size: small;
+}
+.rating span{
+  color: white;
+}
+.search-results-grid{
+   display: grid ;
+  grid-template-rows: repeat(5, minmax(44px, 1fr)) ;
+  grid-auto-columns: minmax(140px, 1fr) ;
+  grid-auto-flow: column ;
+  gap: 20px;
+  margin-right: 150px;
+}
+.search-movie-item{
+  border-radius: 5px;
+   height: 1;
+   background-color: #1f2937;
+   padding-top: 20px;
+   margin-bottom: 20px;
+   height: 320px;
+   padding: 10px;
+}
+
+.search-movie-item img{
+  position: relative;
+}
+
+.search-results-section{
+  display: grid ;
+  grid-template-rows: repeat(5, minmax(44px, 1fr)) ;
+  grid-auto-columns: minmax(140px, 1fr) ;
+  grid-auto-flow: column ;
+  gap: 20px;
+  margin-right: 150px;
+  margin-top: 30px;
+}
+
+.dotted-border {
+  border: 20px;
+  position: relative;
+  top: -3px;
+}
